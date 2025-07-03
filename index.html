@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carpool Connect</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <header>
+    <h1>Carpool Connect</h1>
+    <nav>
+      <button onclick="showSection('login')">Login</button>
+      <button onclick="showSection('register')">Register</button>
+      <button onclick="showSection('rideShare')">Ride Share</button>
+      <button onclick="showSection('routes')">Routes</button>
+      <button onclick="showSection('payment')">Payment</button>
+    </nav>
+  </header>
+
+  
+  <section id="login" class="hidden">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="register" class="hidden">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  
+  <section id="rideShare" class="hidden">
+    <h2>Find or Offer a Ride</h2>
+    <form id="rideForm">
+      <input type="text" placeholder="Pickup Location" required />
+      <input type="text" placeholder="Destination" required />
+      <input type="date" required />
+      <input type="time" required />
+      <select>
+        <option value="offer">Offer a Ride</option>
+        <option value="find">Find a Ride</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+
+  <section id="routes" class="hidden">
+    <h2>Route Optimization</h2>
+    <form id="routeForm">
+      <input type="text" placeholder="Start Location" required />
+      <input type="text" placeholder="Drop-off Location" required />
+      <button type="submit">Optimize Route</button>
+    </form>
+    <div id="optimizedRoute"></div>
+  </section>
+
+  
+  <section id="payment" class="hidden">
+    <h2>Payment</h2>
+    <form id="paymentForm">
+      <input type="text" placeholder="Card Number" required />
+      <input type="text" placeholder="Cardholder Name" required />
+      <input type="text" placeholder="MM/YY" required />
+      <input type="text" placeholder="CVV" required />
+      <button type="submit">Pay</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Carpool Connect. All rights reserved.</p>
+  </footer>
+
+  <script>
+  
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>

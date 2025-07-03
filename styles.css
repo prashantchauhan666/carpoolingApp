@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px;
+  background: white;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 1em;
+}
